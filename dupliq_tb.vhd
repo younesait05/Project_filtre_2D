@@ -8,7 +8,15 @@ entity tb_lena_dupliq is
 end;
 
 architecture arch_tb_lena_dupliq of tb_lena_dupliq is
-
+  component demo_p
+    Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
+           Q : out STD_LOGIC_VECTOR (7 downto 0);
+           CLK : in STD_LOGIC;
+           EN : in STD_LOGIC;
+           RST : in STD_LOGIC
+           );
+  end component;
+  
   component fifo_gen 
     port (  clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -37,20 +45,39 @@ architecture arch_tb_lena_dupliq of tb_lena_dupliq is
   signal prog_full : STD_LOGIC;
   signal wr_rst_busy : STD_LOGIC;
   signal rd_rst_busy : STD_LOGIC; 
+  
+ 
+  signal en : std_logic := '1';
+  signal ff1_out, ff2_out, ff3_out  : std_logic_vector(7 downto 0);
     
   signal I1 : std_logic_vector (7 downto 0);
   signal O1 : std_logic_vector (7 downto 0); 
   
   constant tmp : time := 10ns;
   
+  constant nb_pixel : integer := 16384;
   
 begin
 
-  uut: fifo_gen 
+                
+    clk_proc:process 
+    begin
+        while true loop
+            clk <= '0';
+            wait for tmp/2;
+            clk <= '1';
+            wait for tmp/2;
+         end loop;
+     end process;
+     ff1: demo_p port map( clk => clk, rst => rst, d => I1, q => ff1_out, en => en);
+     ff2: demo_p port map( clk => clk, rst => rst, d => ff1_out, q => ff2_out, en => en);
+     ff3: demo_p port map( clk => clk, rst => rst, d => ff2_out, q => ff3_out, en => en);
+     
+     uut: fifo_gen 
         port map ( 
             clk => clk,
             rst => rst,
-            din => din, 
+            din => ff3_out, 
             wr_en => wr_en,
             rd_en => rd_en,
             prog_full_thresh => prog_full_thresh,
@@ -60,16 +87,6 @@ begin
             prog_full => prog_full,
             wr_rst_busy => wr_rst_busy,
             rd_rst_busy => wr_rst_busy );
-            
-    clk_proc:process 
-     begin
-        while true loop
-            clk <= '0';
-            wait for tmp/2;
-            clk <= '1';
-            wait for tmp/2;
-         end loop;
-     end process;
      
  p_read : process
   FILE vectors : text;
@@ -79,10 +96,11 @@ begin
     begin
     file_open (vectors,"Lena128x128g_8bits.dat", read_mode);
     rst <= '1';
+    en <= '0';
     wait for 100 ns;
     rst <= '0';
+    en <= '1';
     wait for 200 ns;
-    
     
     while not endfile(vectors) loop
       readline (vectors,Iline);
@@ -92,6 +110,7 @@ begin
 	  wait until clk'event and clk = '1';
 	  wait for 3 ns;
 	  if full ='0' then 
+	   wait for 335 ns;
 	   din <= I1_var;
 	   wr_en <= '1';
 	  else 
@@ -104,7 +123,6 @@ begin
 
 p_write: process
   variable comp_pixel : integer := 0;
-  constant nb_pixel : integer := 16384;
   file results : text;
   variable OLine : line;
   variable O1_var :std_logic_vector (7 downto 0);

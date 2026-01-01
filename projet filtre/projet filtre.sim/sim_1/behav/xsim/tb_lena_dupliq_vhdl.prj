@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../projet filtre.srcs/sources_1/new/Clock_Counter.vhd" \
+"../../../../projet filtre.srcs/sources_1/new/FF_Yns.vhd" \
+"../../../../projet filtre.srcs/sources_1/new/add_pixels.vhd" \
+"../../../../projet filtre.srcs/sources_1/new/compt_decompt.vhd" \
+"../../../../projet filtre.srcs/sources_1/new/gaussian.vhd" \
+"../../../../projet filtre.srcs/sources_1/new/memoire_cash.vhd" \
+"../../../../projet filtre.srcs/sim_1/new/tb_memoire_cash.vhd" \
+
+# Do not sort compile order
+nosort

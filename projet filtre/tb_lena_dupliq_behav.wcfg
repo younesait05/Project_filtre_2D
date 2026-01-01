@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_lena_dupliq_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_lena_dupliq" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="270370fs"></ZoomStartTime>
+      <ZoomEndTime time="371927fs"></ZoomEndTime>
+      <Cursor1Time time="355000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="188"></NameColumnWidth>
+      <ValueColumnWidth column_width="158"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="33" />
+   <wvobject fp_name="/tb_lena_dupliq/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/O1" type="array">
+      <obj_property name="ElementShortName">O1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">O1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/DATA_AVAILABLE" type="logic">
+      <obj_property name="ElementShortName">DATA_AVAILABLE</obj_property>
+      <obj_property name="ObjectShortName">DATA_AVAILABLE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/clk_TB" type="logic">
+      <obj_property name="ElementShortName">clk_TB</obj_property>
+      <obj_property name="ObjectShortName">clk_TB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/rest_TB" type="logic">
+      <obj_property name="ElementShortName">rest_TB</obj_property>
+      <obj_property name="ObjectShortName">rest_TB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/valid_TB" type="logic">
+      <obj_property name="ElementShortName">valid_TB</obj_property>
+      <obj_property name="ObjectShortName">valid_TB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/tmp" type="other">
+      <obj_property name="ElementShortName">tmp</obj_property>
+      <obj_property name="ObjectShortName">tmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/I1" type="array">
+      <obj_property name="ElementShortName">I1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">I1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF9/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF8/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF7/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF6/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF5/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF4/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF3/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF2/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/DFF1/Q" type="array">
+      <obj_property name="ElementShortName">Q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/STAGE" type="other">
+      <obj_property name="ElementShortName">STAGE</obj_property>
+      <obj_property name="ObjectShortName">STAGE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/done_s" type="logic">
+      <obj_property name="ElementShortName">done_s</obj_property>
+      <obj_property name="ObjectShortName">done_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/FIFO1/din" type="array">
+      <obj_property name="ElementShortName">din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">din[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/FIFO1/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/valid_out" type="logic">
+      <obj_property name="ElementShortName">valid_out</obj_property>
+      <obj_property name="ObjectShortName">valid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/FIFO1/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P8" type="array">
+      <obj_property name="ElementShortName">P8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P8[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P7" type="array">
+      <obj_property name="ElementShortName">P7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P7[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P6" type="array">
+      <obj_property name="ElementShortName">P6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P6[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P5" type="array">
+      <obj_property name="ElementShortName">P5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P5[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P4" type="array">
+      <obj_property name="ElementShortName">P4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P3" type="array">
+      <obj_property name="ElementShortName">P3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P2" type="array">
+      <obj_property name="ElementShortName">P2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P1" type="array">
+      <obj_property name="ElementShortName">P1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lena_dupliq/memoire/P0" type="array">
+      <obj_property name="ElementShortName">P0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P0[7:0]</obj_property>
+   </wvobject>
+</wave_config>
